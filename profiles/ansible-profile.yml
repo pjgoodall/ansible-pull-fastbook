@@ -1,0 +1,20 @@
+config:
+  nvidia.runtime: "true"
+  nvidia.driver.capabilities: compute, utility
+  user.user-data: |
+    #cloud-config
+    locale: en_AU.UTF-8
+    timezone: Australia/Sydney
+    package_upgrade: true
+    packages:
+      - python3-pip
+    runcmd:
+      - pip3 install ansible
+    ssh_authorized_keys:
+       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC9mw6JrxOFkFadUC6glkqlKOwcHqdGyGUDiAJ/SUsXFoSBTcR4vuoF0IZ9btHlXuSCfPZirXrtR5Chon52D0lplDl3TU9XR9fHeaHffNMoWlsvmk8tTEMCuJRqlxGkl0P+rO77QSwkjWFwczmJNoAYni0WNrNEXflaBK6A8+lbbSTI+QryDkKm4vnUXsEh6dtz3/cSDUGFDz0e8v9U3ZginsyCKgQETauUtt7OQDqdv9KgUvnPglkkAwZ4P0xT1DywKL6TvjpVWutnoEh55ZrevCerVmOm178a/5nONo4sIHFqMmH6EHdpqE5AcepWZagt2CU4V5sc3spoBcCridFqS/MItNYkGtbFS3kYnBcB44g9PSWmTy1QMzHfXDrf+yhniUGf4EH9ph0k9hXP5LtkB2m59Xbxrd+InOj959kFp+xKXHxyqa5KDne10q7/miZUEbhZWdrxzAH7E3Nc8JB+q8+dVo1iK51Aby8Zf27uHj2lq216mTw4qphM51wmxjka744/pcV4fQtqMLqFQyOP8NnXoo4y7J9OluGeYtTE4KMfCpX+2sVGw3aYTmnUYp8hgzHjFPzIzOSGsj+njXenD8PGaQfsa2dqNOCuN0917Y4jI+bR4XfIGuWLD1cuaFIM0ncwuXcjZp8SpiS6P2AVtEJT2W88+ZAAKNf/lyxMLw== iPhone
+description: GUI LXD profile
+devices:
+  gpu:
+    type: gpu
+name: ansible-cuda
+used_by: []

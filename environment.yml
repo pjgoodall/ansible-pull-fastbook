@@ -1,0 +1,11 @@
+name: fastbook
+channels:
+  - fastai
+  - pytorch
+  - defaults
+dependencies:
+  - fastai::fastai
+  - fastai::fastbook
+  # My additions
+  - conda-forge::notebook
+  - conda-forge::jupyter_contrib_nbextensions
