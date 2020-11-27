@@ -1,0 +1,7 @@
+- name: Run a script using an executable in a system path
+  hosts: localhost
+  user: ubuntu
+  shell: 
+    cmd: ./install_miniconda.sh
+    chdir: /home/ubuntu
+    creates: /home/ubuntu/miniconda3
