@@ -1,12 +1,10 @@
 ---
 --- 
-  
+
 - name: Install fastbook tutorial environment
   hosts: localhost
   user: ubuntu
   tasks:
-    - name: PWD
-      shell: echo $PWD
 
     - name: install miniconda
       shell: 
