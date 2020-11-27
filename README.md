@@ -1,8 +1,8 @@
 # ansible-pull-fastbook
 
-This is a work-in-progress. Comments are welcome, but it is now **very pre-alpha**.
+This is a work-in-progress. Comments are welcome, but it is now **very pre-alpha**. Many of the references aren't primary, but some  of these are neater than the official methods. Will improve reverences as I go.
 
-The artifacts here will install a fastbook learning environment into 
+The artifacts here will install a fastbook learning environment into
 an Ubuntu lxc container or workstation/server.
 
 You can either use ansible pull to install from this repository, or use provided files and install as you prefer.
@@ -57,7 +57,7 @@ driver   : nvidia-driver-450 - distro non-free
 driver   : xserver-xorg-video-nouveau - distro free builtin
 ```
 
-My specific card `GeForce GTX 1050 Ti` is not explicitly in the list, but it seems that Nvidia is not maintaining their compatibility list properly `:-(`. 
+My specific card `GeForce GTX 1050 Ti` is not explicitly in the list, but it seems that Nvidia is not maintaining their compatibility list properly `:-(`.
 
 It runs fine:
 
@@ -78,10 +78,9 @@ Fri Nov 20 10:21:40 2020
 [...]
 ```
 
-
 The [`environment.yml`](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) file in the [fastbook repository](https://github.com/fastai/fastbook) specifies the pytorch version as `pytorch>=1.6` The current stable version of pytorch, and its compatibility is displayed nicely on [pytorch.org](https://pytorch.org/)
 
-Working backwards we need to determine if you have an Nvidia video card that will run a version a version of CUDA >= 10.1 according to [Install Pytorch on pytorch.org](https://pytorch.org/)
+We need to determine if you have an Nvidia video card that will run a version a version of CUDA >= 10.1 according to [Install Pytorch on pytorch.org](https://pytorch.org/)
 
 ### Install Nvidia Driver and CUDA on host
 
@@ -100,10 +99,21 @@ sudo ubuntu-drivers autoinstall
 sudo apt nvidia-cuda-toolkit
 ```
 
+## Use `ansible-pull` to setup server
+
+
+### References
+
+1. [curbina/ansible-miniconda](https://github.com/curbina/ansible-miniconda). An ansible role for installing miniconda. It is seven years old - will need checking to see if there is an official module, or if it needs updating.
+2. Official documentation for [ansible-pull](https://docs.ansible.com/ansible/latest/cli/ansible-pull.html)
+3. [How to manage your workstation configuration with Ansible](https://opensource.com/article/18/3/manage-workstation-ansible)
+4. [reddit - Ansible in pull mode](https://www.reddit.com/r/devops/comments/6fajam/ansible_in_pull_mode/)
+
+
 ## General References
 
 1. DataCrunch.io - [Setting up a DataCrunch.io server for fast.ai & jupyter notebooks](https://datacrunch.io/docs/setting-up-fastai/) - I will feed-back my work to DataCrunch.io
 2. [ansible-pull](https://docs.ansible.com/ansible/latest/cli/ansible-pull.html#ansible-pull)
 3. [github: fastai/fastbook](https://github.com/fastai/fastbook)
 
-A lot more on the way...
+A lot more on the way..

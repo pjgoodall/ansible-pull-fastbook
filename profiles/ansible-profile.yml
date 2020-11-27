@@ -9,9 +9,9 @@ config:
     packages:
       - python3-pip
     runcmd:
-      - pip3 install ansible
+      - pip3 install ansible --user
     ssh_authorized_keys:
-       - ssh-rsa <insert your public key here>
+       - ssh-rsa <paste your public key here>
 description: GUI LXD profile
 devices:
   gpu:

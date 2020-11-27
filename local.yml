@@ -1,0 +1,14 @@
+---
+
+- name: Install fastbook tutorial environment
+  hosts: localhost
+  become: true
+  tasks:
+    - name: install miniconda
+      command: sh ./install_miniconda.sh
+    - name: configure miniconda in bash
+  
+  
+ 
+
+    
