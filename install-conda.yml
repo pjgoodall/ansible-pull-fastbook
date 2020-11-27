@@ -9,5 +9,5 @@
     - name: install miniconda
       shell:
         cmd: ./install_miniconda.sh
-        chdir: /home/ubuntu
+        # chdir: /home/ubuntu
         creates: /home/ubuntu/miniconda3
