@@ -1,15 +1,13 @@
 ---
-
 - name: Install fastbook tutorial environment
   hosts: localhost
   user: ubuntu
   tasks:
-  
     - name: PWD
-      shell: echo "FatBoy""
+      shell: echo "FatBoy"
 
     - name: install miniconda
-      shell: 
+      shell:
         cmd: ./install_miniconda.sh
         chdir: /home/ubuntu
         creates: /home/ubuntu/miniconda3
