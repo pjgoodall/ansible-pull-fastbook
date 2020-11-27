@@ -5,7 +5,7 @@
   become: true
   tasks:
     - name: install miniconda
-      shell: sh ./install_miniconda.sh
+      shell: ./install_miniconda.sh
     # - name: configure miniconda in bash
   
   
