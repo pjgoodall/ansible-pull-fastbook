@@ -6,7 +6,7 @@
   tasks:
   
     - name: PWD
-      shell: echo $PWD
+      shell: echo "FatBoy""
 
     - name: install miniconda
       shell: 
