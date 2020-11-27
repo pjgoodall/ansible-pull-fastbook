@@ -2,10 +2,10 @@
 
 - name: Install fastbook tutorial environment
   hosts: localhost
-  become: true
+  user: ubuntu
   tasks:
     - name: install miniconda
-      shell: bash ./install_miniconda.sh
+      script: ./install_miniconda.sh
   
   
  
