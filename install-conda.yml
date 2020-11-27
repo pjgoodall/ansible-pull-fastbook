@@ -3,11 +3,7 @@
   hosts: localhost
   user: ubuntu
   tasks:
-    - name: PWD
-      shell: echo "FatBoy"
-
     - name: install miniconda
       shell:
-        cmd: sh ./install_miniconda.sh 
-        # chdir: /home/ubuntu
+        cmd: sh ./install_miniconda.sh > conda_install.log
         creates: /home/ubuntu/miniconda3
